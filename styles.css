@@ -1,0 +1,690 @@
+/******
+Color Pallete
+#E71D36 - Red
+#2EC4B6 - Blue
+#EFFFE9 - Light White
+#011627 - Dark Blue
+
+Media Queries
+1080px - Desktop
+*****/
+
+*{
+  box-sizing: border-box;
+}
+
+html, body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Permanent Marker', cursive;
+  overflow-x: hidden;
+}
+
+.wrapper{
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.center{
+  text-align: center;
+}
+
+.text{
+  background: #EFFFE9;
+  color: #011627;
+  padding: 25px 10px;
+}
+
+.text__title{
+  font-size: 2rem;
+  color: #011627;
+  margin: 0 0 5px;
+}
+
+.text p{
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.text .book{
+  margin: 0 auto;
+  display: block;
+  width: 200px;
+}
+
+/***** Navbar *****/
+.navbar{
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+  top: 0;
+  right: -100%;
+
+  transition: all 1s;
+
+  background: #011627;
+  z-index: 1000;
+}
+
+.navbar.show{
+  transform: translateX(-100vw);
+}
+
+.navbar__hamburguer, .navbar__close{
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+
+  position: fixed;
+  right: 25px;
+  top: 25px;
+
+  color: #EFFFE9;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.navbar .navbar__close{
+  display: none;
+}
+
+.navbar.show .navbar__close{
+  display: block;
+}
+
+.navbar.show .navbar__hamburguer{
+  display: none;
+}
+
+.navbar__logo{
+  width: 80%;
+  max-width: 280px;
+  margin: 0 auto;
+  display: block;
+}
+
+.navbar__list{
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0 0 50px;
+}
+
+.navbar__list a{
+  width: 100%;
+  text-align: center;
+  color: #FFF;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-decoration: none;
+  display: block
+}
+
+.navbar__list a:hover, .navbar__list a.selected{
+  color: #2EC4B6;
+}
+
+.navbar__image{
+  display: none;
+}
+
+@media screen and (min-width: 1080px){
+  .navbar{
+    height: 50px;
+    right: 0;
+    background: transparent;
+  }
+
+  .navbar--solid{
+    background: #011627;
+  }
+
+  .navbar.show{
+    transform: translateX(0);
+  }
+
+  .navbar__hamburguer, .navbar__close, .navbar__logo{
+    display: none;
+  }
+
+  .navbar__list{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .navbar__list a{
+    width: auto;
+    display: inline-block;
+    height: 100%;
+    line-height: 50px;
+  }
+
+  .navbar__image{
+    height: 50px;
+    display: block;
+    margin: 8px 0;
+  }
+}
+
+/***** Jumbotron *****/
+.jumbotron{
+  width: 100%;
+  min-height: 60vh;
+  position: relative;
+
+  text-align: center;
+  color: #EFFFE9;
+
+  font-family: 'Permanent Marker', cursive;
+  z-index: -2;
+}
+
+.jumbotron--home{
+  background-image: url('images/baleal-surf.jpg');
+  background-position: center right;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 80vh;
+}
+
+.jumbotron--surf{
+  background-image: url('images/surfschool.jpeg');
+  background-position: center bottom;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.jumbotron--booking{
+  background-image: url('images/booking.jpeg');
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.jumbotron--about{
+  background-image: url('images/about.jpg');
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.jumbotron--twin{
+  background-image: url('images/beach-house.jpg');
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.jumbotron--apartment{
+  background-image: url('images/apartment/view.JPG');
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.jumbotron--rooms{
+  background-image: url('images/surf.jpg');
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.jumbotron--contacts{
+  background-image: url('images/surf.jpg');
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.jumbotron::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background: rgba(0, 0, 0, .1);
+  z-index: -1;
+}
+
+.jumbotron__logo{
+  width: 640px;
+  max-width: 100%;
+  margin: 10px auto 80px;
+}
+
+.jumbotron__header{
+  font-size: 1.8rem;
+  margin: 0;
+  width: 90%;
+  position: absolute;
+  bottom: 20px;
+  left: 5%;
+  text-align: center;
+}
+
+.jumbotron__title{
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  width: 100%;
+  position: absolute;
+  bottom: 25px;
+  color: #FFF;
+  margin: 0;
+}
+
+@media screen and (min-width: 1080px){
+  .jumbotron__logo{
+    margin: 40px auto 20px;
+  }
+
+  .jumbotron__header{
+    font-size: 2.5rem;
+  }
+}
+
+/***** Rooms *****/
+.room{
+  width: 100%;
+  position: relative;
+  padding: 5%;
+  overflow: auto;
+}
+
+.room__image{
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+}
+
+.room__details{
+  width: 100%;
+  min-height: 320px;
+  height: 100%;
+  padding: 5%;
+
+  background: rgba(255, 255, 255, .4);
+  color: #000;
+  font-size: 1.05rem;
+
+  text-align: center;
+}
+
+.room__details__title{
+  text-align: center;
+  font-size: 2rem;
+  color: #011627;
+  margin-top: 0;
+}
+
+.book{
+  text-decoration: none;
+  background: #E71D36;
+  color: #EFFFE9;
+  display: inline-block;
+  border: 2px solid #E71D36;
+  padding: 10px;
+  border-radius: 2em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.book:hover{
+  background: #011627;
+  border-color: #011627;
+}
+
+@media screen and (min-width: 1080px){
+  .room{
+    padding: 0;
+    height: 375px;
+    overflow: hidden;
+  }
+
+  .room__image{
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative;
+    display: block;
+  }
+
+  .room__details{
+    width: 50%;
+    float: left;
+    background: #EFFFE9;
+  }
+
+  .room--reverse .room__image{
+    float: right;
+  }
+}
+
+/***** Footer *****/
+.separator{
+  width: 100%;
+  height: 150px;
+
+  background-image: url('images/baleal.jpg');
+  background-position: center top;
+  background-attachment: fixed;
+}
+
+.footer{
+  width: 100%;
+  background: #011627;
+  padding: 50px 0 15px;
+  overflow: auto;
+  color: #EFFFE9;
+}
+
+.footer__column{
+  width: 100%;
+  display: block;
+  float: left;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.footer__title{
+  font-size: 2rem;
+  color: #E71D36;
+  margin: 0 0 5px;
+}
+
+.footer__copywrite{
+  width: 100%;
+  text-align: center;
+  font-size: .8rem;
+  float: left;
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 1080px){
+  .footer__column{
+    width: 50%;
+  }
+}
+
+/***** Social *****/
+.social{
+  list-style-type: none;
+  margin: 10px auto 10px;
+  padding: 0;
+  width: 210px;
+}
+
+.social li{
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin: 0 10px;
+}
+
+.social a{
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: block;
+  line-height: 50px;
+  font-size: 1.5rem;
+  color: #E71D36;
+  background: #EFFFE9;
+  border-radius: 50%;
+  text-align: center;
+}
+
+@media screen and (min-width: 1080px){
+  .navbar .social{
+    display: none;
+  }
+}
+
+/***** Price Tables *****/
+.prices{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto 25px;
+}
+
+.prices td{
+  text-align: center;
+  color: #EFFFE9;
+  background: #2EC4B6;
+  border: 1px solid #EFFFE9;
+  padding: 5px;
+}
+
+.prices th{
+  background: #011627;
+  color: #E71D36;
+  font-size: 1.2rem;
+  border: 1px solid #EFFFE9;
+}
+
+.prices .right{
+  text-align: right;
+}
+
+.prices .hide{
+  display: none;
+}
+
+.hide--small{
+  display: none;
+}
+
+.hide--large{
+  display: table;
+}
+
+@media screen and (min-width: 1080px){
+  .prices .hide{
+    display: table-cell;
+  }
+
+  .hide--small{
+    display: table;
+  }
+
+  .hide--large{
+    display: none;
+  }
+}
+
+/***** Carousel *****/
+.carousel{
+  list-style-type: none;
+  padding: 0;
+  margin: 25px auto 0;
+  max-width: 100%;
+  width: 860px;
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel li{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+.carousel .show{
+  opacity: 1;
+}
+
+.carousel img{
+  max-width: 100%;
+}
+
+#carousel__nav{
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  top: auto;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -100px;
+  display: flex;
+  opacity: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+#carousel__nav i{
+  cursor: pointer;
+}
+
+@media screen and (min-width: 560px){
+  .carousel{
+    height: 350px;
+  }
+
+  #carousel__nav{
+    bottom: -20px;
+  }
+}
+
+@media screen and (min-width: 1080px){
+  .carousel{
+    height: 500px;
+  }
+
+  #carousel__nav{
+    bottom: 0;
+  }
+}
+
+/***** Form *****/
+.form{
+  width: 560px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px 10px 25px;
+}
+
+.form__title{
+  font-size: 2rem;
+  color: #011627;
+  margin: 0 0 5px;
+  text-align: center;
+  color: #E71D36;
+}
+
+.form__group{
+  width: 100%;
+  height: 55px;
+  float: left;
+  margin: 0 0 20px;
+}
+
+.form__group label{
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: #011627;
+}
+
+.form__group input{
+  width: 200px;
+  height: 30px;
+  margin: 0 auto;
+  display: block;
+  padding: 0 10px;
+  border: 1px solid #011627;
+}
+
+.form textarea{
+  width: 200px;
+  max-width: 100%;
+  height: 75px;
+  margin: 0 auto 20px;
+  display: block;
+  padding: 10px;
+  border: 1px solid #011627;
+}
+
+.form .book{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.05rem;
+  width: 100px;
+}
+
+@media screen and (min-width: 1080px){
+  .form__group{
+    width: 270px;
+  }
+
+  .form textarea{
+    width: 470px;
+  }
+}
+
+
+/***** Instagram Mural *****/
+/*#instagram{
+  width: 200%;
+  height: 150px;
+  overflow: hidden;
+  position: relative;
+}
+
+#instagram::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#instagram img{
+  height: 150px;
+  float: left;
+}
+
+.instagram__title{
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  margin: -25px 0 0 -150px;
+
+  text-align: center;
+  text-decoration: none;
+  color: #EFFFE9;
+  font-size: 1.5rem;
+
+  background: rgba(1, 22, 39, .8);
+  z-index: 10;
+}*/
+
+
+/***** Google Map *****/
+#map{
+      height: 400px;
+      width: 100%;
+}
