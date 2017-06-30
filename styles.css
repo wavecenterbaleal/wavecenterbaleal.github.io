@@ -16,8 +16,16 @@ Media Queries
 html, body{
   padding: 0;
   margin: 0;
-  font-family: 'Permanent Marker', cursive;
   overflow-x: hidden;
+  font-family: 'Fresca', sans-serif;
+}
+
+input, textarea{
+  font-family: 'Fresca', sans-serif;
+}
+
+h1, h2, h3, h4, a{
+  font-family: 'Permanent Marker', cursive;
 }
 
 .wrapper{
@@ -310,18 +318,22 @@ html, body{
   min-height: 320px;
   height: 100%;
   padding: 5%;
-  
+
   color: #000;
   font-size: 1.05rem;
 
   text-align: center;
 }
 
+.room__details p{
+  text-align: justify;
+}
+
 .room__details__title{
   text-align: center;
   font-size: 2rem;
   color: #011627;
-  margin-top: 0;
+  margin: 0;
 }
 
 .book{
