@@ -197,9 +197,8 @@ h1, h2, h3, h4, a{
 
 .jumbotron--home{
   background-image: url('images/baleal-surf.jpg');
-  background-position: center right;
+  background-position: center center;
   background-size: cover;
-  background-attachment: fixed;
   min-height: 80vh;
 }
 
@@ -207,49 +206,42 @@ h1, h2, h3, h4, a{
   background-image: url('images/surfschool.jpeg');
   background-position: center bottom;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 .jumbotron--booking{
   background-image: url('images/booking.jpeg');
-  background-position: bottom;
+  background-position: center bottom;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 .jumbotron--about{
   background-image: url('images/about.jpg');
-  background-position: bottom;
+  background-position: center bottom;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 .jumbotron--twin{
   background-image: url('images/beach-house.jpg');
-  background-position: bottom;
+  background-position: center bottom;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 .jumbotron--apartment{
   background-image: url('images/apartment/view.JPG');
-  background-position: bottom;
+  background-position: center bottom;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 .jumbotron--rooms{
   background-image: url('images/surf.jpg');
-  background-position: bottom;
+  background-position: center bottom;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 .jumbotron--contacts{
   background-image: url('images/surf.jpg');
-  background-position: bottom;
+  background-position: center bottom;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 .jumbotron::after{
@@ -292,6 +284,10 @@ h1, h2, h3, h4, a{
 }
 
 @media screen and (min-width: 1080px){
+  .jumbotron{
+    background-attachment: fixed;
+  }
+
   .jumbotron__logo{
     margin: 40px auto 20px;
   }
@@ -384,8 +380,7 @@ h1, h2, h3, h4, a{
   height: 150px;
 
   background-image: url('images/baleal.jpg');
-  background-position: center top;
-  background-attachment: fixed;
+  background-position: center center;
 }
 
 .footer{
@@ -419,6 +414,11 @@ h1, h2, h3, h4, a{
 }
 
 @media screen and (min-width: 1080px){
+  .separator{
+    background-attachment: fixed;
+    background-position: center top;
+  }
+
   .footer__column{
     width: 50%;
   }
